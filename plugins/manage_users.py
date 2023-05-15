@@ -39,7 +39,7 @@ async def set_vpn_core(c,m):
     if m.text=='cisco':
         cisco_vpn=Cisco()
 
-        res=cisco_vpn.create_user(config.username,config.password)
+        res=cisco_vpn.create_user(config['username'],config['password'])
         await m.reply('user created')
 
         
