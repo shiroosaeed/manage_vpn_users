@@ -7,9 +7,9 @@ class Cisco:
         pass
 
 
-    def create_user(username, password, self) -> bool:
+    def create_user(username, password, self):
 
-        output = os.popen(f'printf "{password}\n{password}\n"|ocpasswd -c /etc/ocserv/ocpasswd {username}').read()
+        output = os.popen('printf "'+password+'\n'+password+'\n"|ocpasswd -c /etc/ocserv/ocpasswd '+username+'').read()
 
         
 
