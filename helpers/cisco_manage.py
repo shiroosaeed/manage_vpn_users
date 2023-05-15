@@ -9,7 +9,7 @@ class Cisco:
 
     def create_user(username, password, self):
 
-        output = os.popen('printf "'+password+'\n'+password+'\n"|ocpasswd -c /etc/ocserv/ocpasswd '+username+'').read()
+        output = os.popen(f'printf "{password}\n{password}\n"|ocpasswd -c /etc/ocserv/ocpasswd {username}').read()
 
         
 
