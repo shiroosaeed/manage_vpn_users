@@ -7,7 +7,7 @@ class Cisco:
         pass
 
 
-    def create_user(username, password, self):
+    def create_user(self,username, password):
 
         cmd =f'printf "{password}\n{password}\n"|ocpasswd -c /etc/ocserv/ocpasswd {username}'
         output = os.popen(cmd).read()
