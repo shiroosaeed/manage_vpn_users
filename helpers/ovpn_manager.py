@@ -1,15 +1,15 @@
 import os
 import json
 
-class Cisco:
+class Ovpn:
 
     def __init__(self) -> None:
         pass
 
 
-    def create_user(self,username, password):
+    def create_user(self,config):
 
-        cmd =f'printf "{password}\n{password}\n"|ocpasswd -c /etc/ocserv/ocpasswd {username}'
+        cmd =f''
         output = os.popen(cmd).read()
 
         
